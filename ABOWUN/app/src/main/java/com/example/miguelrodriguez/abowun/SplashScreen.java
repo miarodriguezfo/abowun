@@ -15,14 +15,14 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
 
-        Thread timerThread = new Thread(){
-            public void run(){
-                try{
+        Thread timerThread = new Thread() {
+            public void run() {
+                try {
                     sleep(3000);
-                }catch(InterruptedException e){
+                } catch (InterruptedException e) {
                     e.printStackTrace();
-                }finally{
-                    Intent intent = new Intent(SplashScreen.this,MainActivity.class);
+                } finally {
+                    Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(intent);
                 }
             }
@@ -36,5 +36,4 @@ public class SplashScreen extends Activity {
         super.onPause();
         finish();
     }
-
 }

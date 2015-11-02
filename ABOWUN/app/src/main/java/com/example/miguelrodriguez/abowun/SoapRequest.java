@@ -23,8 +23,8 @@ public class SoapRequest {
 
     private static final boolean DEBUG_SOAP_REQUEST_RESPONSE = true;
     private static final String NAMESPACE = "http://test/";
-    //private static final String MAIN_REQUEST_URL = "http://192.168.0.18:8080/tpi/test";
-    private static final String MAIN_REQUEST_URL = "http://192.168.173.1:8080/tpi/test";
+    private static final String MAIN_REQUEST_URL = "http://192.168.0.18:8080/tpi/test";
+    //  private static final String MAIN_REQUEST_URL = "http://192.168.173.1:8080/tpi/test";
     private static final String SOAP_ACTION = "";
     private static String SESSION_ID;
 
@@ -38,49 +38,10 @@ public class SoapRequest {
         return envelope;
     }
 
-    public String getCelsiusConversion(String fValue) {
-        String data = null;
-        String methodname = "hello";
 
-        SoapObject request = new SoapObject(NAMESPACE, methodname);
-        request.addProperty("name",fValue);
-
-        SoapSerializationEnvelope envelope = getSoapSerializationEnvelope(request);
-
-        HttpTransportSE ht = getHttpTransportSE();
-        try {
-            ht.setXmlVersionTag("<?xml version=\"1.0\" encoding= \"UTF-8\"?>");
-            ht.call(SOAP_ACTION, envelope);
-            testHttpResponse(ht);
-            SoapPrimitive resultsString = (SoapPrimitive)envelope.getResponse();
-
-            List<HeaderProperty> COOKIE_HEADER = (List<HeaderProperty>) ht.getServiceConnection().getResponseProperties();
-
-            for (int i = 0; i < COOKIE_HEADER.size(); i++) {
-                String key = COOKIE_HEADER.get(i).getKey();
-                String value = COOKIE_HEADER.get(i).getValue();
-
-                if (key != null && key.equalsIgnoreCase("set-cookie")) {
-                    SoapRequest.SESSION_ID = value.trim();
-                    Log.v("SOAP RETURN", "Cookie :" + SoapRequest.SESSION_ID);
-                    break;
-                }
-            }
-            data = resultsString.toString();
-
-        } catch (SocketTimeoutException t) {
-            t.printStackTrace();
-        } catch (IOException i) {
-            i.printStackTrace();
-        } catch (Exception q) {
-            q.printStackTrace();
-        }
-        return data;
-    }
-
-    public void sendImage(String imData) {
+    public ArrayList<String> sendImage(String imData) {
         String methodname = "Analizarimagen";
-
+        ArrayList<String> data = new ArrayList<String>();
 
 
         SoapObject request = new SoapObject(NAMESPACE, methodname);
@@ -93,7 +54,15 @@ public class SoapRequest {
             ht.setXmlVersionTag("<?xml version=\"1.0\" encoding= \"UTF-8\"?>");
             ht.call(SOAP_ACTION, envelope);
             testHttpResponse(ht);
-            SoapPrimitive resultsString = (SoapPrimitive)envelope.getResponse();
+            //SoapPrimitive resultsString = (SoapPrimitive)envelope.getResponse();
+
+            SoapObject result = (SoapObject) envelope.bodyIn;
+            int count = result.getPropertyCount();
+
+            for (int i = 0; i < count; i++)
+            {
+                data.add(result.getPropertyAsString(i));
+            }
 
             List<HeaderProperty> COOKIE_HEADER = (List<HeaderProperty>) ht.getServiceConnection().getResponseProperties();
 
@@ -115,6 +84,7 @@ public class SoapRequest {
         } catch (Exception q) {
             q.printStackTrace();
         }
+        return data;
     }
 
     private final HttpTransportSE getHttpTransportSE() {

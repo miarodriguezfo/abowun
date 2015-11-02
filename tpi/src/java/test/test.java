@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,7 +44,7 @@ public class test {
      * Web service operation
      */
     @WebMethod(operationName = "Analizarimagen")
-    public void Analizarimagen(@WebParam(name = "imageByte") String imageByte) {
+    public ArrayList<Integer> Analizarimagen(@WebParam(name = "imageByte") String imageByte) {
         //TODO write your implementation code here:
         String filePath = "D:/Unal/TPI/serverTest/hello2.jpg";
         try {
@@ -54,12 +55,13 @@ public class test {
             
             outputStream.write(decoded);
             outputStream.close();
-             clasificador.clasificar();
+             
             System.out.println("Received file: " + filePath);
              
+            return clasificador.clasificar();
         } catch (IOException ex) {
             
-            System.err.println(ex);
+            //System.err.println(ex);
             throw new WebServiceException(ex);
         }
     }

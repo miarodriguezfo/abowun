@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">ABOWUN</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="nombre_comun_0">Colibri Colirufo</string>
+    <string name="nombre_cientifico_0">Amazilla tzacatl</string>
+    <string name="nombre_comun_1">Garcita de Ganado</string>
+    <string name="nombre_cientifico_1">Bubulcus Ibis</string>
+    <string name="nombre_comun_2">Paloma Domestica</string>
+    <string name="nombre_cientifico_2">Columba livia</string>
+    <string name="nombre_comun_3">Gallizano Negro</string>
+    <string name="nombre_cientifico_3">Coragyps Atratus</string>
+    <string name="nombre_comun_4">Golondrina Tijereta</string>
+    <string name="nombre_cientifico_4">Hirundo Rustica</string>
+    <string name="nombre_comun_5">Currucutu Común</string>
+    <string name="nombre_cientifico_5">Megascops Choliba</string>
+    <string name="nombre_comun_6">Canario Criollo</string>
+    <string name="nombre_cientifico_6">Sicalis Flaveola</string>
+    <string name="nombre_comun_7">Azulejo</string>
+    <string name="nombre_cientifico_7">Thraupis Episcopus</string>
+    <string name="nombre_comun_8">Mirla Común</string>
+    <string name="nombre_cientifico_8">Turdus Fuscater</string>
+    <string name="nombre_comun_9">Copeton</string>
+    <string name="nombre_cientifico_9">Zonotrichia Capensis</string>
 </resources>

@@ -1,23 +1,15 @@
 package com.example.miguelrodriguez.abowun;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
@@ -25,27 +17,18 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView txt;
-    private String celsius;
     private static int RESULT_LOAD_IMAGE = 1;
+    Uri uri;
     private Bitmap bitmap;
-    private byte[] imData;
     String encodedImage;
     ImageView imageView;	//reference to the ImageView
     int xDim, yDim;		//stores ImageView dimensions
@@ -53,14 +36,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
-        //final EditText edt = (EditText)findViewById(R.id.valor);
+
+
         Button btn = (Button) findViewById(R.id.select);
         Button btnSnd = (Button) findViewById(R.id.send);
-        //txt = (TextView)findViewById(R.id.answer);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
         btnSnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSpecie(encodedImage);
 
+                Intent intent = new Intent(MainActivity.this, Loading.class);
+                intent.putExtra("encoded", uri);
+                startActivity(intent);
             }
         });
     }
@@ -107,19 +93,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public Handler handler = new Handler(new Handler.Callback() {
 
-        @Override
-        public boolean handleMessage(Message msg) {
-            switch (msg.what) {
-
-                case 0:
-                    //txt.setText(celsius);
-                    break;
-            }
-            return false;
-        }
-    });
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -133,14 +107,11 @@ public class MainActivity extends AppCompatActivity {
                         data.getData());
 
 
-                bitmap = BitmapFactory.decodeStream(stream);
                 stream.close();
-                encodedImage = Base64.encodeToString(getBytesFromBitmap(bitmap), Base64.NO_WRAP);
                 imageView = (ImageView) findViewById(R.id.imageView);
-                Uri uri= data.getData();
+                uri= data.getData();
 
                 System.out.println(getRealPathFromURI(uri));
-                //imageView.setImageBitmap(bitmap);
                 imageView.setImageBitmap(decodeSampledBitmapFromResource(getRealPathFromURI(uri) , xDim, yDim));
 
             } catch (FileNotFoundException e) {
@@ -151,38 +122,6 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private final void getSpecie(final String toSend) {
-        new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                SoapRequest sr = new SoapRequest();
-                sr.sendImage(toSend);
-                handler.sendEmptyMessage(0);
-            }
-        }).start();
-    }
-
-    public byte[] getBytesFromBitmap(Bitmap bitmap) {
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-        return stream.toByteArray();
-    }
-
-    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
-                                                         int reqWidth, int reqHeight) {
-
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(res, resId, options);
-        // Calculate inSampleSize
-        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeResource(res, resId, options);
-    }
 
     public static Bitmap decodeSampledBitmapFromResource(String filepath,
                                                          int reqWidth, int reqHeight) {
@@ -248,4 +187,5 @@ public class MainActivity extends AppCompatActivity {
         xDim=imageView.getWidth();
         yDim=imageView.getHeight();
     }
+
 }

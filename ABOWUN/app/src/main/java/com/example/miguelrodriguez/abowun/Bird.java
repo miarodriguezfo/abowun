@@ -7,10 +7,12 @@ public class Bird {
     String comunName;
     String scientificName;
     int photoId;
+    String inf;
 
-    Bird(String cName, String sName, int photoId) {
+    Bird(String cName, String sName, int photoId, String inf) {
         this.comunName = cName;
         this.scientificName = sName;
         this.photoId = photoId;
+        this.inf = inf;
     }
 }

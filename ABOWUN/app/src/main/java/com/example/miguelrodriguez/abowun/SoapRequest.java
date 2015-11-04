@@ -23,8 +23,8 @@ public class SoapRequest {
 
     private static final boolean DEBUG_SOAP_REQUEST_RESPONSE = true;
     private static final String NAMESPACE = "http://test/";
-    private static final String MAIN_REQUEST_URL = "http://192.168.0.18:8080/tpi/test";
-    //  private static final String MAIN_REQUEST_URL = "http://192.168.173.1:8080/tpi/test";
+    // private static final String MAIN_REQUEST_URL = "http://192.168.0.18:8080/tpi/test";
+    private static final String MAIN_REQUEST_URL = "http://192.168.173.1:8080/tpi/test";
     private static final String SOAP_ACTION = "";
     private static String SESSION_ID;
 

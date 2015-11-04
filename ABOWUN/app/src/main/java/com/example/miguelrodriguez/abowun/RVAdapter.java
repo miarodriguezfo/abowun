@@ -13,13 +13,16 @@ import java.util.List;
 /**
  * Created by Miguel Rodriguez on 31/10/2015.
  */
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.BirdViewHolder>  {
+public class RVAdapter extends RecyclerView.Adapter<RVAdapter.BirdViewHolder> implements View.OnClickListener  {
+
+    private View.OnClickListener listener;
 
     public static class BirdViewHolder extends RecyclerView.ViewHolder {
 
         CardView cv;
         TextView comunName;
         TextView scientificName;
+        TextView info;
         ImageView birdPhoto;
 
 
@@ -29,6 +32,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.BirdViewHolder>  {
             comunName = (TextView)itemView.findViewById(R.id.c_name);
             scientificName = (TextView)itemView.findViewById(R.id.s_name);
             birdPhoto = (ImageView)itemView.findViewById(R.id.bird_photo);
+            info= (TextView)itemView.findViewById(R.id.textViewInfo);
         }
     }
 
@@ -46,6 +50,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.BirdViewHolder>  {
     @Override
     public BirdViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item, viewGroup, false);
+        v.setOnClickListener(this);
         BirdViewHolder pvh = new BirdViewHolder(v);
         return pvh;
     }
@@ -55,10 +60,22 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.BirdViewHolder>  {
         birdViewHolder.comunName.setText(birds.get(i).comunName);
         birdViewHolder.scientificName.setText(birds.get(i).scientificName);
         birdViewHolder.birdPhoto.setImageResource(birds.get(i).photoId);
+        birdViewHolder.info.setText(birds.get(i).inf);
     }
 
     @Override
     public int getItemCount() {
         return birds.size();
     }
+
+    @Override
+    public void onClick(View v) {
+        if(listener != null)
+            listener.onClick(v);
+    }
+
+    public void setOnClickListener(View.OnClickListener listener) {
+        this.listener = listener;
+    }
+
 }

@@ -1,26 +1,99 @@
-<resources>
+﻿<resources>
     <string name="app_name">ABOWUN</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_list">ListActivity</string>
     <string name="nombre_comun_0">Colibri Colirufo</string>
-    <string name="nombre_cientifico_0">Amazilla tzacatl</string>
+    <string name="nombre_cientifico_0">Amazilia tzacatl</string>
+    <string name="informacion_0"> A. tzacalt presenta un largo total promedio de 9.1 cm, pico recto de 20 mm, mandíbula inferior rosa y con ápice negro. El macho por encima verde, cola color castaño y ligeramente ahorquillada,
+	garganta y pecho verde iridiscente. La hembra similar pero plumas de garganta y pecho marginadas gris.
+	Esta especie se distribuye desde el oriente de México hasta el occidente de Venezuela.Se distribuye en Colombia hasta 1800 msnm. La amazilia colirrufa se encuentra en las selvas húmedas a secas, es común en jardines
+	 y zonas pobladas. En la Central Hidroeléctrica Miel I se registró en el bosque El Tigre, en el rastrojo de El Encanto y Reten Norcasia y
+	 en áreas intervenidas de Cantera y Terraplen. 
+	Tomado de SIB catálogo de especies </string>
     <string name="nombre_comun_1">Garcita de Ganado</string>
     <string name="nombre_cientifico_1">Bubulcus Ibis</string>
+    <string name="informacion_1"> Es llamada así porque comunmente se le ve siguiendo el ganado. 
+	Es originaria del Antiguo Mundo siendo muy común en Europa, África y regiones cálidas de Asia. 
+	Esta garza mide entre 46 y 56 cm y pesa de 340 a 390 g. Tiene un aspecto rechoncho y su cuerpo es completamente blanco con el pico amarillo y las patas verde opaco. 
+	En Colombia se encuentra en el oeste de los Andes y este hasta el oeste de Caquetá y Vaupés.
+	Habita en zonas de cultivos y en donde hay actividad ganadera, algunas veces en zonas suburbanas y ciudades. 
+	También usa praderas, pantanos, arrozales y en menor medida bosques y hábitats marinos. 
+	Es la garza de menos hábitos acuáticos.  
+	Tomado de ICESI wiki de aves de Colombia </string>
     <string name="nombre_comun_2">Paloma Domestica</string>
     <string name="nombre_cientifico_2">Columba livia</string>
+    <string name="informacion_2"> También llamada Paloma bravía. Es el ancestro de la paloma salvaje, 
+	son derivados salvajes o semisalvajes debido a la domesticación.
+	Macho mide entre 306-344 mm, hembra entre 326-334 mm de longitud.En el plumaje predomina el gris y 
+	rara vez es simétrico, cabeza oscura, en el cuello presenta plumaje matizado metálico verde 
+	o purpura que varía dependiendo del Angulo de la luz.
+	Es difícil determinar la distribución exacta de Columba Livia debido al largo proceso de domesticación de la especie.
+	C. Livia es una especie Cosmopolitan, más que todo en centros de poblaciones humanas
+	Tomado de ICESI wiki de aves de Colombia </string>
     <string name="nombre_comun_3">Gallizano Negro</string>
     <string name="nombre_cientifico_3">Coragyps Atratus</string>
+    <string name="informacion_3">Son buitres relativamente pequeños de proporciones rechonchas. Alas muy anchas y medianas, cola corta. 
+	De coloracion general negra, cabeza desnuda con pliegues y arrugas, patas largas y garras no prensiles.  
+	Puede anidar en repisas de acantilados rocosos, troncos huecos, nidos abandonados e inclusive en pastizales altos.
+	La nidada puede ser de uno a tres huevos (generalmente dos) de color azul verdoso con pecas de color marrón. 
+	Sus periodos de incubacion suelen tardar entre 39 y 41 días.
+	Es una especie común y abundante en toda Colombia, asociada a áreas abiertas y semiabiertas, 
+	ubicandose principalmente en los alrededores de las ciudades como bausreros o rellenos sanitarios. 
+	Poco común en boques primarios y fragmentados.
+	Tomado de ICESI wiki de aves de Colombia </string>
     <string name="nombre_comun_4">Golondrina Tijereta</string>
     <string name="nombre_cientifico_4">Hirundo Rustica</string>
+    <string name="informacion_4"> Es un ave migratoria que se reproducen en Norteamérica, Europa, Asia y norte de África. 
+	Las poblaciones de Norteamérica invernan en Suramérica, Aruba y Trinidad. Puede ser encontrada en cualquier parte 
+	del pais desde el nivel del mar hasta 3000m de altura.
+	Mide alrededor de 18 cm y pesa de 16 a 24 g. El macho presenta frente y garganta rufa, coronilla y partes altas azul 
+	lustroso y cola negra con parches blancos en las margenes internas de las rectrices. Las plumas externas de la cola 
+	son notoriamente elongadas. Presenta una amplia banda pectoral azul y el resto de las partes inferiores de color crema. 
+	Tomado de ICESI wiki de aves de Colombia </string>
     <string name="nombre_comun_5">Currucutu Común</string>
     <string name="nombre_cientifico_5">Megascops Choliba</string>
+    <string name="informacion_5"> Es el búho pequeño más común en Colombia. Se encuentra en todo el territorio nacional excepto en la vertiente pacífica de la cordillera Occidental. 
+	Mide de 20 a 24 cm y pesa de 97 a 160 g. Se reconocen tres morfos: café grisáceo, café y rufo. Presenta iris amarillo, pico gris verdoso con punta gris y patas de color café grisáceo. 
+	Por debajo es principalmente blanco con vermiculado fino de color café y estriado negro.
+	Habita en sabanas, bosques de galería y bordes de selva de tierras bajas y várzea. También utiliza áreas abiertas con árboles dispersos, plantaciones y en ocasiones áreas suburbanas. 
+ 	Es un ave nocturna que durante el día descansa en cavidades o en ramas. Forrajea a alturas bajas y captura sus presas en ramas o en el suelo, frecuentemente a lo largo de carreteras. 
+	En ocasiones captura insectos al vuelo, especialmente cerca de luces artificiales. Generalmente permanece en parejas.
+	Tomado de ICESI wiki de aves de Colombia </string>
     <string name="nombre_comun_6">Canario Criollo</string>
     <string name="nombre_cientifico_6">Sicalis Flaveola</string>
+    <string name="informacion_6"> En esta especie de ave, el macho es brillante amarillento con coronilla naranja brillante, amarillo dorado en resto de cabeza y partes inferiores.
+	La hembra es como el macho pero más opaca y menos naranja en la coronilla, oliva-pardo con estrías fuertes y oscuras en el raquis, infracaudales amarillas.
+	Es una hermosa ave que se comercializa como animal vivo. Se localiza altitudinalmente hasta los 1000m. Se distribuyen ampliamente en Uruguay, Colombia, Venezuela, Ecuador, Perú, Bolivia, Brasil, Paraguay, Argentina.
+	En Colombia esta ave se distribuye en la Región Caribe desde Córdoba hasta Guajira y hasta bajo valle del Cauca (hasta Medellín); de los Andes desde Arauca hasta el Meta y Vichada. 
+	Introducido al área de Cali y a Buenaventura,probablemente aves escapadas de jaulas. 
+	Tomado de SIB catálogo de especies </string>
     <string name="nombre_comun_7">Azulejo</string>
     <string name="nombre_cientifico_7">Thraupis Episcopus</string>
+    <string name="informacion_7"> 16.5cm. Cabeza, cuello y partes inferiores gris azul pálido en contraste con alta espalda más oscura y más azul;
+	alas y cola marginadas de azuloso, hombros azul claro a oscuro.Común en hábitats esencialmente no forestales, incluida toda clase de áreas 
+	pobladas, plantaciones, parques urbanos, varios estados sucesionales y bordes, en regiones desde secas hasta muy húmedas
+	El nido es una copa profunda y gruesa. Pone de 2-4 huevos blanco azuloso fuertemente estriado y punteado de oscuro.
+	El activo y ruidoso Azulejo, como se le conoce ampliamente, es uno de los pájaros más familiares de Colombia en áreas pobladas. Es muy sociable, 
+	se encuentra en parejas o pequeños grupos y, mientras come, notablemente versátil: busca cabeza abajo a lo largo de ramas, revisa follaje, 
+	caza insectos al aire y visita arboles en flor y fruta o comederos con fruta. 
+	Tomado de ICESI wiki de aves de Colombia </string>
     <string name="nombre_comun_8">Mirla Común</string>
     <string name="nombre_cientifico_8">Turdus Fuscater</string>
+    <string name="informacion_8"> La mirla común es una de las aves más comunes de los climas fríos. Es la más grande entre las mirlas de Colombia. 
+	Mide alrededor de 18cm. Su pico y patas son color naranja y sus ojos blancos. Encima es gris pizarra oscuro, la cabeza negruzca con estrecho anillo ocular naranja. 
+	Se distribuye entre los 600 a 3500m, principalmente por encima de los 2000m. Habita principalmente en bordes de bosque montano y bosquete secundario. Se le ve frecuentemente en claros, 
+	áreas agrícolas,  potreros, rastrojos, parques urbanos y jardines de clima frio. Alcanza el límite de vegetación arbórea en ambas estribaciones andinas y en los valles interandinos.
+	En el municipio de Roncesvalles, Tolima, se encontró un individuo con despigmentación blanca que cubrío la cabeza hasta la parte media del cuerpo. Esta coloración atípica probablemente sea un caso de leucismo incompleto o parcial.
+	La mirla común tiene un mala fama y muchas personas la ven como una plaga pues es muy común y frecuentemente ahuyenta a los otros pajaros de sitios de alimentación.
+	Tomado de ICESI wiki de aves de Colombia </string>
     <string name="nombre_comun_9">Copeton</string>
     <string name="nombre_cientifico_9">Zonotrichia Capensis</string>
-    <string name="test">esto es un prueba muy imprtante jajaja</string>
+    <string name="informacion_9"> Común en áreas abiertas y campos agrícolas,
+	una de las aves más comunes entre 1000 y 3700 m de altura sobre el nivel del mar. 
+	Mide entre 11.8 y 13.4 cm y pesa de 16.8 a 31 g. Es ligeramente crestada y con pico cónico de tamaño medio. 
+	Dificilmente se confunden con otras especies, los adultos se reconocen fácilmente por cabeza gris con listas negras y collar rufo
+	Se encuentra desde el sur de México hasta Tierra del Fuego Argentina.  
+	Habita en áreas abiertas desde el nivel del mar hasta altas elevaciones. Con frecuencia en bordes de carreteras, en parques y viviendas. 
+	También en áreas agrícolas y terrenos abiertos con árboles dispersos.
+	Tomado de ICESI wiki de aves de Colombia </string>
 </resources>

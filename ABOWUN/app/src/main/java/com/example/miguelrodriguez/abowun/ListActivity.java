@@ -40,10 +40,8 @@ public class ListActivity extends AppCompatActivity {
         rv.setLayoutManager(llm);
         rv.setHasFixedSize(true);
 
+        System.out.println("ssssssssssssssssssssssssssssssss " + res);
         res=(ArrayList<String>)getIntent().getExtras().get("respuesta");
-
-
-
 
         initializeData();
         initializeAdapter();
@@ -61,7 +59,7 @@ public class ListActivity extends AppCompatActivity {
                     getResources().getString(getResources().getIdentifier("nombre_comun_" + n, "string", getPackageName())),
                     getResources().getString(getResources().getIdentifier("nombre_cientifico_" + n, "string", getPackageName())),
                     getResources().getIdentifier("photo_specie_" + n, "drawable", getPackageName()),
-                    getResources().getString(getResources().getIdentifier("test", "string", getPackageName()))));
+                    getResources().getString(getResources().getIdentifier("informacion_" + n, "string", getPackageName()))));
         }
 
     }

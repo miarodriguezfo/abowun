@@ -62,6 +62,7 @@ public class Loading extends AppCompatActivity {
             public void run() {
                 SoapRequest sr = new SoapRequest();
                 respuesta=sr.sendImage(toSend);
+                System.out.println("Apppppppppppppppppppp " + respuesta);
                 handler.sendEmptyMessage(0);
 
             }
@@ -106,7 +107,7 @@ public class Loading extends AppCompatActivity {
                 e.printStackTrace();
             }
             try {
-                Thread.sleep(3000);
+                Thread.sleep(14000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
